@@ -52,7 +52,7 @@ while True:
                                     if(session["vaccine"] != ''):
                                         print("\t Vaccine type: ", session["vaccine"])
                                     print("\n")
-                                    notification_message = "Pincode: " + pincode + "\n" + "Available on: "+ datetime.now() + "\n" + "Center Name: " + center["name"] + "\n" + "Availablity: " + session["available_capacity"]
+                                    notification_message = "Pincode: " + pincode + "\n" + "Available on: "+ datetime.now().strftime("%m/%d/%Y, %H:%M:%S") + "\n" + "Center Name: " + center["name"] + "\n" + "Availablity: " + session["available_capacity"]
                                     sh.append_row([notification_message])
 
                                     counter = counter + 1
@@ -60,7 +60,7 @@ while True:
                 print("No Response!")
                 
     if counter == 0:
-        message = "No Vaccination slot available! "+ datetime.now()
+        message = "No Vaccination slot available! "+ datetime.now().strftime("%m/%d/%Y, %H:%M:%S")
         sh.update('B1',message)
         print(message)
     else:
