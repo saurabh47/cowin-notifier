@@ -52,7 +52,7 @@ while True:
                                     if(session["vaccine"] != ''):
                                         print("\t Vaccine type: ", session["vaccine"])
                                     print("\n")
-                                    notification_message = "Pincode: " + pincode + "\n" + "Available on: "+ datetime.now().strftime("%m/%d/%Y, %H:%M:%S") + "\n" + "Center Name: " + center["name"] + "\n" + "Availablity: " + session["available_capacity"]
+                                    notification_message = "Pincode: " + str(pincode) + "\n" + "Available on: "+ datetime.now().strftime("%m/%d/%Y, %H:%M:%S") + "\n" + "Center Name: " + center["name"] + "\n" + "Availablity: " + str(session["available_capacity"])
                                     sh.append_row([notification_message])
 
                                     counter = counter + 1
@@ -65,9 +65,9 @@ while True:
         print(message)
     else:
         print("Counter ",counter)
-        mixer.init()
-        mixer.music.load('sound/dingdong.wav')
-        mixer.music.play()
+        #mixer.init()
+        #mixer.music.load('sound/dingdong.wav')
+        #mixer.music.play()
         print("Search Completed!")
 
     dt = datetime.now() + timedelta(minutes=1)
