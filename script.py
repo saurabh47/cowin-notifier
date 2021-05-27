@@ -48,11 +48,12 @@ while True:
                                     print("\t", center["block_name"])
                                     print("\t Price: ", center["fee_type"])
                                     print("\t Availablity : ", session["available_capacity"])
+                                    print("\t Vaccine : ", session["vaccine"])
 
                                     if(session["vaccine"] != ''):
                                         print("\t Vaccine type: ", session["vaccine"])
                                     print("\n")
-                                    notification_message = "Pincode: " + str(pincode) + "\n" + "Available on: "+ datetime.now().strftime("%m/%d/%Y, %H:%M:%S") + "\n" + "Center Name: " + center["name"] + "\n" + "Availablity: " + str(session["available_capacity"])
+                                    notification_message = "Pincode: " + str(pincode) + "\n" + "Available on: "+ datetime.now().strftime("%m/%d/%Y, %H:%M:%S") + "\n" + "Center Name: " + center["name"] + "\n" + "Availablity: " + str(session["available_capacity"]) + "\n" + "Vaccine Type: " + session["vaccine"]
                                     sh.append_row([notification_message])
 
                                     counter = counter + 1
