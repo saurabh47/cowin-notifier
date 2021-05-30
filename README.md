@@ -23,3 +23,5 @@ pip3 install requests pygame gspread
 ```
 nohup python3 -u script.py &
 ```
+![Visitor Count](https://profile-counter.glitch.me/{saurabh47}/count.svg)
+
